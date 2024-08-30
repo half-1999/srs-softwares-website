@@ -1,25 +1,45 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SRS Softwares",
+  "name": "SRS Softwares - Best Software Solutions",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://www.srssoftwares.com/img/ptac.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://www.srssoftwares.com/img/ptac.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://www.srssoftwares.com/img/ptac.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "SRS Softwares offers the best software solutions for businesses, including ERP systems, web development, and more.",
+  "orientation": "portrait",
+  "lang": "en-US",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with SRS Softwares",
+      "url": "/contact",
+      "icons": [{ "src": "contact-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Explore the services offered by SRS Softwares",
+      "url": "/services",
+      "icons": [{ "src": "services-icon.png", "sizes": "192x192" }]
+    }
+  ]
 }
