@@ -9,7 +9,7 @@ const ServiceSection = ({ imagePath, content, type, title }) => {
         <img src={imagePath} alt="Service" className="mx-auto h-[200px] object-cover rounded-xl" />
       </div>
       <div className="w-full lg:w-1/2 p-4">
-        <h1 className="text-lg font-semibold underline">{title}</h1>
+        <h1 className="text-lg font-semibold text-center">{title}</h1>
         <p className="text-sm text-justify">{content}</p>
       </div>
     </div>

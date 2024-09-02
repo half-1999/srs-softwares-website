@@ -13,11 +13,9 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleMobileMenuToggle = () => {
-    setMobileMenuOpen(prev => !prev);
-    if (mobileMenuOpen) {
+      setMobileMenuOpen(prev => !prev);
       setServiceDropdownOpen(false);
       setTechDropdownOpen(false);
-    }
   };
 
   const handleDropdownToggle = (type) => {
@@ -92,7 +90,7 @@ const Navbar = () => {
                               <img
                                 src={service.image}
                                 alt={service.name}
-                                className="w-full h-32 object-contain mb-2"
+                                className="w-full h-32 object-contain mb-5"
                               />
                               {service.name}
                             </div>
@@ -207,15 +205,28 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300 }}
-            className="fixed top-0 right-0 h-full w-64 bg-[#17191E] text-white shadow-lg z-50"
+            className="fixed inset-0 m-auto h-[97%] w-[97%] bg-white shadow-2xl rounded-xl z-50 "
           >
-            <div className="flex justify-end p-4">
-              <button onClick={handleMobileMenuToggle}><FaTimes size={24} /></button>
-            </div>
+          <div className="flex items-center justify-between flex-grow p-4">
+            <Link to="/">
+              <img
+                src="https://www.srssoftwares.in/assets/images/logo/ptac.png"
+                alt="Service"
+                className="rounded-xl w-[100px]"
+              />
+            </Link>
+            <button onClick={handleMobileMenuToggle}>
+              <FaTimes size={24} />
+            </button>
+          </div>
+
+
+          
             <div className="flex flex-col p-4">
-              <Link to="/about" className="text-lg mb-4">Company</Link>
+              <Link to="/" className="text-md mb-5 bg-white text-black font-semibold p-1 rounded-lg shadow-xl" onClick={handleMobileMenuToggle}>Home</Link>
+              <Link to="/about" className="text-md mb-5 bg-white text-black font-semibold p-1 rounded-lg shadow-xl" onClick={handleMobileMenuToggle}>About</Link>
               <div
-                className="relative cursor-pointer mb-4"
+                className="relative cursor-pointer mb-5 bg-white text-black font-semibold p-1 rounded-lg shadow-xl"
                 onClick={() => handleDropdownToggle('services')}
               >
                 <div className="flex items-center">
@@ -237,18 +248,19 @@ const Navbar = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="bg-white text-black mt-2 rounded-lg"
                     >
-                      <div className="p-4">
+                      <div className="p-2 h-[400px] overflow-y-auto mt-2">
                         {services.slice(0, 10).map((service, index) => (
                           <Link
                             to={`/services/${service.route}`}
                             key={index}
-                            className="block mb-2 text-sm"
+                            className="block mb-5 text-sm"
+                            onClick={handleMobileMenuToggle}
                           >
                             <div className="flex flex-col items-center border rounded-lg shadow-xl bg-white p-2">
                               <img
                                 src={service.image}
                                 alt={service.name}
-                                className="w-full h-32 object-contain mb-2"
+                                className="w-full h-32 object-contain mb-5"
                               />
                               {service.name}
                             </div>
@@ -260,7 +272,7 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
               <div
-                className="relative cursor-pointer"
+                className="relative cursor-pointer mb-5 bg-white text-black font-semibold p-1 rounded-lg shadow-xl"
                 onClick={() => handleDropdownToggle('technologies')}
               >
                 <div className="flex items-center">
@@ -282,18 +294,17 @@ const Navbar = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="bg-white text-black mt-2 rounded-lg"
                     >
-                      <div className="p-4">
+                      <div className="p-2 h-[400px] overflow-y-auto">
                         {Object.entries(techData).map(([category, techs]) => (
-                          <div key={category} className="mb-4">
-                            <h3 className="text-lg font-semibold mb-2">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
-                            <div className="flex flex-col">
+                          <div key={category} className="mb-1 ">
+                            <div className="flex flex-col  " >
                               {techs.map((tech, index) => (
-                                <div key={index} className="flex items-center mb-2">
-                                  <div className={`text-center ${tech.color}`}>{tech.icon}</div>
+                                <div key={index} className="flex items-center mb-5 " onClick={handleMobileMenuToggle}>
+                                <Link to='/technologies' >
                                   <div className="ml-2">
-                                    <h4 className="text-lg font-semibold">{tech.name}</h4>
-                                    <p className="text-sm">{tech.content}</p>
+                                    <h4 className="text-sm font-semibold flex ">{tech.icon} <span className='ml-2'>{tech.name}</span></h4>
                                   </div>
+                                  </Link>
                                 </div>
                               ))}
                             </div>
@@ -304,8 +315,36 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <Link to="/portfolio" className="text-lg mt-4 mb-4">PortFolio</Link>
-              <Link to="/career" className="text-lg">Career</Link>
+              <Link to="/portfolio" className="bg-white text-black font-semibold p-1 rounded-lg mb-5 shadow-xl" onClick={handleMobileMenuToggle}>PortFolio</Link>
+              <Link to="/career" className="bg-white text-black font-semibold p-1 rounded-lg shadow-xl mb-5" onClick={handleMobileMenuToggle}>Career</Link>
+              <div className="flex flex-grow justify-end" onClick={handleMobileMenuToggle}>
+          <Link to="/contact" className="flex items-center">
+            <button className='p-2 bg-white shadow-xl rounded-lg text-sm font-semibold'>
+              <motion.div
+                initial={{ x: 0 }}
+                whileHover={{ x: 10 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="text-blue-500 hover:text-blue-600 flex"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+                <span className='text-blue-500'></span>Let's Connect
+              </motion.div>
+            </button>
+          </Link>
+              </div>
             </div>
           </motion.div>
         )}

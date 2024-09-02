@@ -10,6 +10,7 @@ import { SiPostgresql, SiMysql,  SiMicrosoftsqlserver, SiMicrosoftazure, SiGoogl
 import { IoLogoPython } from 'react-icons/io';
 import NextJsIcon from '../utils/NextJsIcon';
 import { TbBrandReactNative } from 'react-icons/tb';
+import { RiNextjsFill } from 'react-icons/ri';
 export const services = [
   {
     name: 'Custom Software Development',
@@ -186,7 +187,7 @@ export const serviceData = {
     },
     {
       heading: 'Comprehensive Software Lifecycle',
-      imagePath: 'https://ncube-digest.com/wp-content/uploads/2019/08/SDLC1.jpg',
+      imagePath: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-devops-illustration_23-2149365031.jpg?t=st=1725268256~exp=1725271856~hmac=75a4401a74a63bdc78b7029b3d65e7d14591ab12f0f05ffbb5a3b474a6c85ad9&w=740',
       content: 'Our comprehensive software development services encompass the entire lifecycle of your project, from the initial concept and planning stages to the final deployment and beyond. We employ a rigorous and systematic approach to project management, ensuring that every phase of development is executed with precision and attention to detail. Our services include requirements analysis, system architecture design, coding, testing, deployment, and post-launch support. We also offer ongoing maintenance and iterative improvements, ensuring that your software continues to evolve in line with your business needs and technological advancements. By maintaining a long-term partnership, we are committed to helping you adapt to changing market conditions and seize new opportunities as they arise.',
       type: 'right'
     },
@@ -819,67 +820,64 @@ export const serviceData = {
 };
 
 export const techData = {
-  backend: [
-    {
-      name: '.Net',
-      icon: <DiDotnet size={40} />,
-      color: 'text-red-600',
-      content: 'Java is a versatile and widely-used programming language. Ideal for building robust and scalable applications.',
-    },
-    {
-      name: 'Node.js',
-      icon: <FaNodeJs size={40} />,
-      color: 'text-green-600',
-      content: 'Node.js is a JavaScript runtime built on Chrome\'s V8 engine. Perfect for building fast and scalable network applications.',
-    },
-    {
-      name: 'PHP',
-      icon: <FaPhp size={40} />,
-      color: 'text-purple-600',
-      content: 'PHP is a popular scripting language for web development. It powers many websites and applications.',
-    },
-    {
-      name: 'Python',
-      icon: <IoLogoPython size={40} />,
-      color: 'text-yellow-500',
-      content: 'Python is a high-level, interpreted language known for its readability and broad applicability in data analysis, AI, and web development.',
-    },
-
-  ],
   frontend: [
     {
       name: 'JavaScript',
-      icon: <FaJs size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-yellow-500">
+          <FaJs />
+        </div>
+      ),
       color: 'text-yellow-500',
       content: 'JavaScript is a versatile programming language used for creating interactive and dynamic web applications. It enables developers to build client-side and server-side code with a single language.',
     },
     {
       name: 'ReactJS',
-      icon: <FaReact size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-600">
+          <FaReact />
+        </div>
+      ),
       color: 'text-blue-600',
       content: 'ReactJS is a JavaScript library for building user interfaces. It allows developers to create single-page applications with a responsive design.',
     },
     {
       name: 'React Native',
-      icon: <FaMobileAlt size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-600">
+          <FaMobileAlt />
+        </div>
+      ),
       color: 'text-blue-600',
       content: 'React Native is a framework for building native applications using React. It allows developers to create applications for iOS and Android using JavaScript and React.',
     },
     {
       name: 'AngularJS',
-      icon: <FaAngular size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-red-600">
+          <FaAngular />
+        </div>
+      ),
       color: 'text-red-600',
       content: 'AngularJS is a structural framework for dynamic web apps. It extends HTML with custom attributes and binds data to HTML with expressions.',
     },
     {
       name: 'Tailwind CSS',
-      icon: <SiTailwindcss size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-500">
+          <SiTailwindcss />
+        </div>
+      ),
       color: 'text-blue-500',
       content: 'Tailwind CSS is a utility-first CSS framework for creating custom designs without leaving your HTML. It provides low-level utility classes for rapid UI development.',
     },
     {
       name: 'Next.js',
-      icon: <NextJsIcon size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-gray-800">
+          <RiNextjsFill  />
+        </div>
+      ),
       color: 'text-gray-800',
       content: 'Next.js is a React framework for server-side rendering and static site generation. It simplifies the process of building and deploying React applications.',
     },
@@ -890,108 +888,210 @@ export const techData = {
     //   content: 'Framer Motion is a library for animations and interactions in React. It provides a simple and powerful API for creating complex animations with ease.',
     // },
   ],
+  backend: [
+    {
+      name: '.Net',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-gray-800">
+          <DiDotnet />
+        </div>
+      ),
+      color: 'text-red-600',
+      content: 'Java is a versatile and widely-used programming language. Ideal for building robust and scalable applications.',
+    },
+    {
+      name: 'Node.js',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-green-600">
+          <FaNodeJs  />
+        </div>
+      ),
+      color: 'text-green-600',
+      content: 'Node.js is a JavaScript runtime built on Chrome\'s V8 engine. Perfect for building fast and scalable network applications.',
+    },
+    {
+      name: 'PHP',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-purple-600">
+          <FaPhp  />
+        </div>
+      ),
+      color: 'text-purple-600',
+      content: 'PHP is a popular scripting language for web development. It powers many websites and applications.',
+    },
+    {
+      name: 'Python',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-yellow-500">
+          <IoLogoPython  />
+        </div>
+      ),
+      color: 'text-yellow-500',
+      content: 'Python is a high-level, interpreted language known for its readability and broad applicability in data analysis, AI, and web development.',
+    },
+
+  ],
   database: [
     {
       name: 'MSSQL',
-      icon: <DiMsqlServer size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-yellow-700">
+          <DiMsqlServer  />
+        </div>
+      ),
       color: 'text-yellow-700',
       content: 'MSSQL is a relational database management system developed by Microsoft. It is known for its integration with other Microsoft services and strong performance.',
     },
     {
       name: 'MongoDB',
-      icon: <DiMongodb size={40} color='green'/>,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-green-700">
+          <DiMongodb  />
+        </div>
+      ),
       color: 'text-gray-600',
       content: 'MongoDB is a NoSQL database known for its high performance and scalability. It stores data in a flexible, JSON-like format.',
     },
     {
       name: 'MySQL',
-      icon: <SiMysql size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-500">
+          <SiMysql  />
+        </div>
+      ),
       color: 'text-blue-500',
       content: 'MySQL is a widely used open-source relational database management system. It is known for its reliability and ease of use.',
     },
     {
       name: 'PostgreSQL',
-      icon: <SiPostgresql size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-800">
+          <SiPostgresql  />
+        </div>
+      ),
       color: 'text-blue-800',
       content: 'PostgreSQL is a powerful, open-source object-relational database system. Known for its robustness and flexibility.',
     },
     {
       name: 'Firebase',
-      icon: <DiFirebase size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-red-600">
+          <DiFirebase  />
+        </div>
+      ),
       color: 'text-red-600',
       content: 'Firebase is a platform developed by Google for creating mobile and web applications. It offers a real-time NoSQL database and other backend services.',
+    },
+  ],
+   cloud: [
+    {
+      name: 'AWS',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-yellow-500">
+          <FaAws  />
+        </div>
+      ),
+      color: 'text-yellow-500',
+      content: 'AWS (Amazon Web Services) is a comprehensive cloud computing platform offering a wide range of services, including storage, networking, and AI.',
+    },
+    {
+      name: 'Google Cloud',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-600">
+          <SiGooglecloud  />
+        </div>
+      ),
+      color: 'text-blue-600',
+      content: 'Google Cloud provides a suite of cloud computing services that runs on the same infrastructure that Google uses for its end-user products.',
+    },
+    {
+      name: 'Azure',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-700">
+          <SiMicrosoftazure  />
+        </div>
+      ),
+      color: 'text-blue-700',
+      content: 'Azure is Microsoft\'s cloud computing platform, offering solutions for building, testing, deploying, and managing applications and services.',
     },
   ],
   mobile: [
     
     {
       name: 'Android',
-      icon: <FaAndroid size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-green-600">
+          <FaAndroid  />
+        </div>
+      ),
       color: 'text-green-600',
       content: 'Android is a mobile operating system developed by Google. It is used in a wide range of devices and offers extensive customization.',
     },
     {
       name: 'Flutter',
-      icon: <FaMobileAlt size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-400">
+          <FaMobileAlt  />
+        </div>
+      ),
       color: 'text-blue-400',
       content: 'Flutter is an open-source UI software development kit created by Google. It allows for building natively compiled applications for mobile, web, and desktop from a single codebase.',
     },
     {
       name: 'React Native',
-      icon: <FaReact size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-700">
+          <FaReact  />
+        </div>
+      ),
       color: 'text-gray-600',
       content: 'React Native is a framework for building native applications using React. It allows you to write native code for iOS and Android using JavaScript.',
     },
     
   ],
-  cloud: [
-    {
-      name: 'AWS',
-      icon: <FaAws size={40} />,
-      color: 'text-yellow-500',
-      content: 'AWS (Amazon Web Services) is a comprehensive cloud computing platform offering a wide range of services, including storage, networking, and AI.',
-    },
-    {
-      name: 'Google Cloud',
-      icon: <SiGooglecloud size={40} />,
-      color: 'text-blue-600',
-      content: 'Google Cloud provides a suite of cloud computing services that runs on the same infrastructure that Google uses for its end-user products.',
-    },
-    {
-      name: 'Azure',
-      icon: <SiMicrosoftazure size={40} />,
-      color: 'text-blue-700',
-      content: 'Azure is Microsoft\'s cloud computing platform, offering solutions for building, testing, deploying, and managing applications and services.',
-    },
-  ],
-  qa: [
+  QA: [
     {
       name: 'Manual QA Testing',
-      icon: <FaTools size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-gray-600">
+          <FaTools  />
+        </div>
+      ),
       color: 'text-gray-600',
       content: 'Manual QA Testing involves human testers manually executing test cases without the use of automation tools.',
     },
     {
-      name: 'Web Testing Automation',
-      icon: <FaLaptopCode size={40} />,
+      name: 'Web Testing ',
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-blue-500">
+          <FaLaptopCode  />
+        </div>
+      ),
       color: 'text-blue-500',
       content: 'Web Testing Automation uses software tools to execute pre-scripted tests on web applications, ensuring they function correctly.',
     },
     {
       name: 'Mobile App Testing',
-      icon: <FaMobileAlt size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-green-700">
+          <FaMobileAlt  />
+        </div>
+      ),
       color: 'text-green-600',
       content: 'Mobile App Testing involves testing mobile applications for functionality, usability, and consistency across different devices and operating systems.',
     },
     {
       name: 'API Testing',
-      icon: <FaCloud size={40} />,
+      icon: (
+        <div className="md:text-[40px] text-[25px] rounded-lg text-red-700">
+          <FaCloud  />
+        </div>
+      ),
       color: 'text-red-600',
       content: 'API Testing involves testing APIs directly and as part of integration testing to determine if they meet expectations for functionality, reliability, performance, and security.',
     },
   ],
 };
-
 
 export const jobOpenings = [
   {
@@ -1074,7 +1174,7 @@ export const projects = [
   {
     id: 4,
     title: 'Billing Software',
-    description: 'A robust billing software designed to automate the billing process for small to medium-sized businesses, offering features like invoice generation, payment tracking, and customer management.',
+    description: 'A robust billing software designed to automate the billing process for small to medium-sized businesses, offering features like invoice generation, payment tracking.',
     technologies: [
       { name: 'React', icon: FaReact },
       { name: 'Node.js', icon: FaNodeJs },
@@ -1093,9 +1193,9 @@ export const projects = [
   {
     id: 6,
     title: 'Production Management Software',
-    description: 'Software tailored for manufacturing units to monitor and manage production lines, inventory levels, and supply chains.',
+    description: 'Software tailored for manufacturing units to monitor and manage production lines, inventory levels, supply chains, inventory levels, and supply chains.',
    technologies: [
-      { name: 'DotNet', icon: DiDotnet },
+      { name: '.Net', icon: DiDotnet },
       { name: 'MSSQL', icon: SiMicrosoftsqlserver },
     ],
     clientsUsed: 150,
@@ -1112,7 +1212,7 @@ export const projects = [
     title: 'Salary Management Software',
     description: 'A salary management software for small businesses, offering features like ledger management, tax calculations, and financial reporting.',
     technologies: [
-      { name: 'DotNet', icon: DiDotnet },
+      { name: '.Net', icon: DiDotnet },
       { name: 'MSSQL', icon: SiMicrosoftsqlserver },
     ],
     clientsUsed: 100,
@@ -1129,7 +1229,7 @@ export const projects = [
     title: 'Trading Management System',
     description: 'A trading platform for educational institutions, offering course management, student enrollment, and progress tracking.',
     technologies: [
-      { name: 'DotNet', icon: DiDotnet },
+      { name: '.Net', icon: DiDotnet },
       { name: 'MSSQL', icon: SiMicrosoftsqlserver },
     ],
     clientsUsed: 220,
@@ -1146,7 +1246,7 @@ export const projects = [
     title: 'Sweet Shop POS',
     description: 'A trading platform for educational institutions, offering course management, student enrollment, and progress tracking.',
     technologies: [
-      { name: 'DotNet', icon: DiDotnet },
+      { name: '.Net', icon: DiDotnet },
       { name: 'MSSQL', icon: SiMicrosoftsqlserver },
     ],
     clientsUsed: 220,

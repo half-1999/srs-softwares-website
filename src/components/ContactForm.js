@@ -52,7 +52,7 @@ const ContactForm = () => {
           Name
         </label>
         <input
-          className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
           id="name"
           name="name"
           type="text"
@@ -67,7 +67,7 @@ const ContactForm = () => {
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             id="email"
             name="email"
             type="email"
@@ -81,10 +81,11 @@ const ContactForm = () => {
             Contact Number
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             id="contact"
             name="contact"
-            type="text"
+            type="tel"
+            maxLength={10}
             placeholder="Your contact number"
             required
           />
@@ -97,7 +98,7 @@ const ContactForm = () => {
             Company Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             id="company"
             name="company"
             type="text"
@@ -110,7 +111,7 @@ const ContactForm = () => {
             City
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             id="city"
             name="city"
             type="text"
@@ -124,7 +125,7 @@ const ContactForm = () => {
           Service
         </label>
         <select
-          className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
           id="service"
           name="service"
           required
@@ -143,7 +144,7 @@ const ContactForm = () => {
           Message
         </label>
         <textarea
-          className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
           id="message"
           name="message"
           rows="4"
@@ -160,7 +161,7 @@ const ContactForm = () => {
       </div>
       <div className="flex items-center justify-end">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Send Message

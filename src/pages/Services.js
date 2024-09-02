@@ -16,9 +16,9 @@ const Services = () => {
     <div className="relative overflow-hidden bg-gray-100">
       {/* Banner Section */}
       <Banner
-        image={AboutImg}
+        image="https://img.freepik.com/free-vector/futuristic-white-technology-background_23-2148390336.jpg?t=st=1725268107~exp=1725271707~hmac=c757e7b4f00e95f76e5115e3798032ac6b11255c7b22f430328c6260df50ebfb&w=1060"
         heading={service.toLocaleUpperCase()}
-        paragraph="Tailored solutions for your business needs"
+        paragraph=""
       />
 
       {/* Carousel Section */}
@@ -43,11 +43,11 @@ const Services = () => {
           {/* Cards Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-8 px-4">
             {serviceContent.cards.map((card, index) => (
-              <div key={index} className="bg-white p-4 border rounded-lg shadow-lg flex items-center hover:scale-105 hover:shadow-xl cursor-pointer duration-700">
-                <div className="mr-4">{card.icon}</div>
+              <div key={index} className="bg-white p-4 border rounded-lg shadow-lg flex  hover:scale-105 hover:shadow-xl cursor-pointer duration-700">
+                <div className="mr-4 flex items-center">{card.icon}</div>
                 <div>
-                  <h2 className="text-lg font-semibold underline">{card.title}</h2>
-                  <p className="text-gray-600 text-sm ml-5 text-justify">{card.description}</p>
+                  <h2 className="text-lg font-semibold text-center">{card.title}</h2>
+                  <p className="text-gray-700 text-sm  text-justify">{card.description}</p>
                 </div>
               </div>
             ))}

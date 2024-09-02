@@ -21,18 +21,19 @@ const PortfolioPage = () => {
               className="mx-auto h-48 object-cover rounded-t-lg"
             />
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
+              <h2 className="text-lg font-semibold mb-2">{project.title}</h2>
               <p className="text-gray-700 mb-4">{project.description}</p>
               <div className="mb-4">
                 <h3 className="text-sm font-semibold text-gray-800">Technologies Used:</h3>
-                <ul className="flex flex-wrap gap-2 mt-2">
+                <ul className="grid grid-cols-4 gap-4 mt-2">
                   {project.technologies.map((tech, index) => (
                     <li key={index} className="flex items-center bg-gray-200 px-3 py-1 rounded-full text-sm">
                       <tech.icon className="mr-2" />
-                      {tech.name}
+                      <span className='text-sm'>{tech.name}</span>
                     </li>
                   ))}
                 </ul>
+
               </div>
               <div className="mb-4">
                 <h3 className="text-sm font-semibold text-gray-800">Key Features:</h3>

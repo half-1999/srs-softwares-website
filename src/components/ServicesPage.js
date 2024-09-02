@@ -5,8 +5,8 @@ import './Loader.css'; // Import the CSS file if it’s in the same directory
 
 const ServicesPage = () => {
   return (
-    <div className="container mx-auto p-4 space-y-4 rounded-lg mt-5">
-      <h1 className="text-2xl font-bold underline mb-4">Services We Expertise In</h1>
+    <div className="container mx-auto space-y-5 rounded-lg m-5">
+      <h1 className="text-2xl font-bold text-center mb-4">Services We Expertise In</h1>
       <div className="carousel-container bg-white shadow-xl rounded-xl p-3">
         <div className="carousel">
           {services.map((service, index) => (

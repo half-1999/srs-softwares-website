@@ -35,14 +35,14 @@ const AboutHero = () => {
   <div className="border-r-2 border-black pr-4 flex items-center">
     <FaRegSmile className="text-4xl text-green-500 mr-2" />
     <div className="text-left">
-      <h2 className="text-xl font-bold">1000+</h2>
+      <h2 className="text-xl font-bold">480+</h2>
       <p>Happy Clients</p>
     </div>
   </div>
   <div className="pr-4 flex items-center">
     <FaProjectDiagram className="text-4xl text-red-500 mr-2" />
     <div className="text-left">
-      <h2 className="text-xl font-bold">150+</h2>
+      <h2 className="text-xl font-bold">748+</h2>
       <p>Project completed</p>
     </div>
   </div>

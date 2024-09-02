@@ -8,19 +8,19 @@ const testimonials = [
     name: 'John Doe',
     role: 'CEO, Company A',
     text: 'This is an amazing service! It helped our business grow significantly.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Yogi_Adithyanath_in_Uttar_Pradesh_2023.jpg'
+    image: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png'
   },
   {
     name: 'Jane Smith',
     role: 'CTO, Company B',
     text: 'Highly recommend! The team is professional and the results are outstanding.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNouSYF7SGHOcJxxOF7XyyMbzyNWD5abuwjQ&s'
+    image: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png'
   },
   {
     name: 'Alice Johnson',
     role: 'Manager, Company C',
     text: 'A fantastic experience from start to finish. Very satisfied with the service.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Amit_Shah_photographed_during_the_first_Union_Cabinet_Meeting_of_the_18th_Lok_Sabha_%28cropped%29.jpg'
+    image: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png'
   },
 ];
 
@@ -38,14 +38,14 @@ const TestimonialsPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 space-y-4">
+    <div className="container mx-auto space-y-5 rounded-lg m-5">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2">
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
                 <div className="flex justify-center mb-4 rounded-xl">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-24 h-24 object-cover rounded-full mx-auto" />
+                  <img src={testimonial.image} alt={testimonial.name} className="w-20 object-cover rounded-full mx-auto" />
                 </div>
                 <FaQuoteLeft className="text-2xl mb-4 text-gray-600" />
                 <p className="text-md mb-4 text-gray-700">{testimonial.text}</p>

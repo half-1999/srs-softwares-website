@@ -73,7 +73,6 @@ const About = () => {
             <img src={WelcomeImg} alt="Service" className="w-full rounded-xl" />
           </div>
           <div className="lg:w-1/2 p-4">
-            <h2 className="text-3xl font-bold mb-5 text-[#4FA8D6]">Welcome to SRS Softwares</h2>
             <p className="text-md text-justify">
               <span className='text-[#4FA8D6] text-lg font-semibold'>SRS Softwares</span> has been a pioneer in providing top-notch Software Development services for over 18 years. Strategically located in Aligarh and Noida, we offer a comprehensive range of IT services that encompass Software Development, Website Designing, E-commerce Solutions, and Android App Development. We meticulously understand our client's planning and strategy before embarking on the development process, ensuring that each solution is tailor-made to meet their specific needs.
               <br /><br />
@@ -163,31 +162,40 @@ const About = () => {
               </div>
         </div>
         
-          <div className="grid md:grid-cols-2 gap-6 mx-auto bg-gray-200 p-8 shadow-md rounded-lg">
-              {/* Left Side */}
-              <div className="space-y-4 bg-gray-400 mx-auto rounded-xl">
-                <img src={MissionImg} alt="Service" className="rounded-xl" />
-              </div>
+          <div className="grid grid-cols-3 gap-6 mx-auto bg-gray-200 p-4 shadow-md rounded-lg">
+  {/* Left Side - Vision Content */}
+  <div className="flex flex-col col-span-1">
+    <div className="flex flex-col ">
+      <div className="flex">
+        <FaBullseye className="text-4xl text-blue-500 mr-2" />
+        <h1 className="text-2xl font-bold">Our Vision</h1>
+      </div>
+      <p className="text-justify text-sm">
+        Our vision is to empower businesses with innovative and efficient solutions, ensuring their sustained growth and success in an ever-evolving market. We strive to be the catalyst for positive change, driving progress through advanced technology and exceptional service.
+      </p>
+    </div>
+  </div>
 
-              {/* Right Side */}
-              <div className="">
-                  <div className="flex items-center mt-5">
-                    <FaBullseye className="text-4xl text-blue-500 mr-2" />
-                    <h1 className="text-2xl font-bold">Our Mission</h1>
-                  </div>
-                  <p className='text-justify text-sm'>
-                    Our mission is to assist businesses in reaching their goals by offering all-inclusive and cutting-edge solutions. We are aware of the problems and wants of our customers, and we offer practical, cost-effective solutions. These remedies could include tech-based services, including data management, cloud computing, business process automation, and software development.
-                  </p>
-                  
-                  <div className="flex items-center mt-5">
-                    <FaEye className="text-4xl text-green-500 mr-2" />
-                    <h1 className="text-2xl font-bold">Our Vision</h1>
-                  </div>
-                  <p className='text-justify text-sm'>
-                    By offering cutting-edge, long-lasting, and client-centred solutions that help businesses expand and accomplish their objectives, our ambition is to become a leader in the sector.
-                  </p>
-              </div>
-          </div>
+  {/* Center - Image */}
+  <div className="flex items-center justify-center col-span-1">
+    <img src={MissionImg} alt="Mission" className="rounded-xl" />
+  </div>
+
+  {/* Right Side - Mission Content */}
+  <div className="flex flex-col col-span-1">
+    <div className="flex flex-col mt-[22%]">
+      <div className="flex mt-5">
+        <FaBullseye className="text-4xl text-blue-500 mr-2" />
+        <h1 className="text-2xl font-bold">Our Mission</h1>
+      </div>
+      <p className="text-justify text-sm">
+        Our mission is to assist businesses in reaching their goals by offering all-inclusive and cutting-edge solutions. We are aware of the problems and wants of our customers, and we offer practical, cost-effective solutions. These remedies could include tech-based services, including data management, cloud computing, business process automation, and software development.
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
           
 
@@ -203,11 +211,11 @@ const About = () => {
 
             case 'values':
               return (
-                <section key={index} className="my-8 px-4">
+                <section key={index} className="my-8 px-4 ">
                   <h2 className="text-2xl font-bold mb-4 text-center">{section.title}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
                     {section.content.map((value, i) => (
-                      <div key={i} className="flex items-center space-x-4">
+                      <div key={i} className="flex items-center space-x-4 bg-gray-200 p-2 rounded-xl">
                         <div className="text-3xl">{value.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold">{value.subTitle}</h3>

@@ -1,37 +1,9 @@
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-// const cors = require('cors');
-// const contactRoute = require('./routes/contact');
-
-// // Initialize express app
-// const app = express();
-
-// // Middleware
-// app.use(cors());
-// app.use(bodyParser.json());
-
-// // MongoDB connection
-// const MONGO_URI = 'mongodb://localhost:27017/contactFormDB'; // Replace with your MongoDB URI
-// mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-//   .then(() => console.log('MongoDB connected'))
-//   .catch(err => console.log(err));
-
-// // Routes
-// app.use('/api/contact', contactRoute);
-
-// // Start the server
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
-
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sql = require('mssql');
 const contactRoute = require('./routes/contact');
+const careerRoute = require('./routes/career');
 
 // Initialize express app
 const app = express();
@@ -42,13 +14,13 @@ app.use(bodyParser.json());
 
 // MS SQL Server connection configuration
 const dbConfig = {
-  user: 'ptacwebsite',          // Replace with your SQL Server username
-  password: 'Ptac!!29082024',      // Replace with your SQL Server password
-  server: '13.213.144.95',  // Replace with your SQL Server address
-  database: 'SOFT000_PG19', // Replace with your database name
+  user: 'ptacwebsite',          
+  password: 'Ptac!!29082024',     
+  server: '13.213.144.95',  
+  database: 'SOFT000_PG19',
   options: {
-    encrypt: false,                // Use encryption if required
-    trustServerCertificate: true  // Change to false if you have a valid SSL certificate
+    encrypt: false,                
+    trustServerCertificate: true  
   }
 };
 
@@ -67,9 +39,10 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/contact', contactRoute);
+app.use('/api/career', careerRoute);
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

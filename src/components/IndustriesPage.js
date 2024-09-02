@@ -7,8 +7,8 @@ const IndustriesPage = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <div className="container mx-auto p-2 space-y-2 mt-5">
-      <h1 className="text-xl font-bold underline mb-2">What We Do</h1>
+    <div className="container mx-auto space-y-5 rounded-lg m-5">
+      <h1 className="text-2xl font-bold mb-2 text-center">What We Do</h1>
       <div className=" mb-8 grid grid-cols-2 md:grid-cols-5 lg:w-[90%] mx-auto">
         {industries.map((industry, index) => (
           <button
@@ -22,11 +22,10 @@ const IndustriesPage = () => {
         ))}
       </div>
       <div className="bg-white p-4 rounded-lg shadow-lg">
-        <div className="mb-4">
-          {industries[selectedTab].icon}
-        </div>
-        <h2 className="text-xl font-bold mb-2">{industries[selectedTab].title}</h2>
+        <div className="">
+        <h2 className="text-xl font-bold mb-2 flex gap-4">{industries[selectedTab].icon} {industries[selectedTab].title}</h2>
         <p className="text-sm text-justify">{industries[selectedTab].description}</p>
+        </div>
       </div>
     </div>
   );

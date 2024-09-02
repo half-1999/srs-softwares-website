@@ -47,18 +47,18 @@ const CoreValues = () => {
   ];
 
   return (
-    <div className="container mx-auto space-y-4 rounded-lg">
-      <h1 className="text-xl font-bold underline ">Core Values</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 ">
+    <div className="container mx-auto space-y-5 rounded-lg m-5">
+      <h1 className="text-2xl font-bold text-center">Core Values</h1>
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 ">
         {values.map((value, index) => (
-          <div key={index} className="flip-card h-[150px] cursor-pointer hover:border hover:shadow-lg ">
+          <div key={index} className="flip-card h-[160px] cursor-pointer hover:border hover:shadow-lg ">
             <div className="flip-card-inner">
               <div className="flip-card-front bg-white p-4 rounded-lg border flex flex-col items-center justify-center">
                 <div className="mb-4">{value.icon}</div>
-                <h2 className="text-md font-bold mb-2">{value.title}</h2>
+                <h2 className="text-sm md:text-md font-semibold mb-2">{value.title}</h2>
               </div>
-              <div className="flip-card-back bg-white p-4 rounded-lg flex flex-col justify-center">
-                <h2 className="text-md font-bold mb-2">{value.title}</h2>
+              <div className="flip-card-back bg-white p-6 rounded-lg flex flex-col justify-center ">
+                <h2 className="text-md font-bold mb-2 mt-2">{value.title}</h2>
                 <p className="text-sm mb-4">{value.description}</p>
               </div>
             </div>
