@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import AboutImg from '../assets/about-us.jpg';
-import WelcomeImg from '../assets/a2.jpg';
+import WelcomeImg from '../assets/bannner.jpg';
 import MissionImg from '../assets/mission.png';
 import { FaLightbulb, FaShieldAlt, FaHandsHelping, FaThumbsUp, FaCheck, } from 'react-icons/fa';
 import { FaCheckCircle, FaUsers, FaHandshake } from 'react-icons/fa';
@@ -74,7 +74,7 @@ const About = () => {
           </div>
           <div className="lg:w-1/2 p-4">
             <p className="text-md text-justify">
-              <span className='text-[#4FA8D6] text-lg font-semibold'>SRS Softwares</span> has been a pioneer in providing top-notch Software Development services for over 18 years. Strategically located in Aligarh and Noida, we offer a comprehensive range of IT services that encompass Software Development, Website Designing, E-commerce Solutions, and Android App Development. We meticulously understand our client's planning and strategy before embarking on the development process, ensuring that each solution is tailor-made to meet their specific needs.
+              <span className='text-[#4FA8D6] text-lg font-semibold'>SRS Softwares</span> has been a pioneer in providing top-notch Software Development services for over 18 years. Strategically located in Noida and Aligarh, we offer a comprehensive range of IT services that encompass Software Development, Website Designing, E-commerce Solutions, and Android App Development. We meticulously understand our client's planning and strategy before embarking on the development process, ensuring that each solution is tailor-made to meet their specific needs.
               <br /><br />
               Our extensive and diverse experience empowers us to deliver a wide array of systems and services designed to maximize efficiency, enhance productivity, and ensure security. Our solutions are not only cost-effective but also provide substantial business value. We leverage the latest technologies and industry best practices to create innovative, reliable, and scalable software solutions. Our commitment to excellence and customer satisfaction has established us as a trusted partner for businesses seeking to thrive in the digital age.
               <br /><br />
@@ -116,16 +116,15 @@ const About = () => {
       </div>
       </div>
       <div className="lg:w-1/2 p-4">
-        <h2 className='text-xl  font-bold'>Why SRS Softwares <span className='text-blue-700 text-4xl'>?</span></h2>
+        <h2 className='text-xl  font-bold'>Why SRS Softwares <span className='text-blue-700 text-2xl'>?</span></h2>
         <p className='text-md text-justify'>We leverage our extensive experience and talented resource pool to deliver the top-notch IT services for businesses globally. Over the years, we have succeeded in keeping up the trust placed in us by our customers and established long term relations.</p>
       </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 w-[80%] mx-auto bg-gray-200 p-2 rounded-lg mb-10">
           {/* Left Side */}
-          <div className="space-y-4 mx-auto rounded-xl">
-            
-                <img src='https://m.economictimes.com/thumb/msid-97021979,width-1200,height-900,resizemode-4,imgsize-46928/modi-new-pti1.jpg' alt="Service" className="rounded-xl mx-auto" />
+              <div className="space-y-4 mx-auto rounded-xl">
+                <img src='https://media.licdn.com/dms/image/D4E12AQGAGSBmysLfbQ/article-cover_image-shrink_600_2000/0/1685971247830?e=2147483647&v=beta&t=x6S8zFHQRs47AogWiXsqabvxlufiqEfr9WsL1FArqrw' alt="Service" className="rounded-xl mx-auto w-full h-full " />
               </div>
 
               {/* Right Side */}
@@ -219,7 +218,7 @@ const About = () => {
                         <div className="text-3xl">{value.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold">{value.subTitle}</h3>
-                          <p className="text-md text-justify">{value.text}</p>
+                          <p className="text-sm text-justify">{value.text}</p>
                         </div>
                       </div>
                     ))}

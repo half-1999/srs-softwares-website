@@ -33,7 +33,7 @@ const Footer = () => {
             <p className='flex gap-2 text-sm'><MdOutlinePhoneCallback size={20} className='mt-1'/><a href="tel:+919557775740" className="text-blue-500">+91 955 777 5740</a></p>
             <p className='flex gap-2 text-sm ml-1'><FaAddressCard size={25} className='mt-1' /> 
               <span className="text-black ml-2"> C-815, Tower C, 8th Floor,
-                iThum Tower, Near Electronic City Metro, Sector 62  Noida <br/> Uttar Pradesh - 201 301</span>
+                iThum Tower, Near Electronic City Metro, Sector 62  Noida <br/> Uttar Pradesh - 201301</span>
               </p>    
 
             </div>
@@ -88,7 +88,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/srssoftwares" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
               <FaInstagram className="text-2xl" />
             </a>
-            <a href="https://youtube.com/srssoftwares" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-gray-600">
+            <a href="https://youtube.com/@srssoftwares3144" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-gray-600">
               <FaYoutube className="text-2xl" />
             </a>
           </div>

@@ -49,7 +49,7 @@ useEffect(() => {
     { id: 'instagramLink', label: 'Instagram Link', type: 'text', placeholder: 'Paste the link to your Insta profile' },
     { id: 'linkedInLink', label: 'LinkedIn Link', type: 'text', placeholder: 'Paste the link to your LinkedIn profile' },
   ],
-  previousExperienceIf: [
+  ifPreviousExperience: [
     { id: 'companyName', label: 'Company Name', type: 'text', placeholder: 'Enter your last company name' },
     { id: 'designation', label: 'Designation', type: 'text', placeholder: 'Enter your designation at the last company' },
     { id: 'totalExperience', label: 'Total Experience ', type: 'number', placeholder: 'Enter your total experience in years' },

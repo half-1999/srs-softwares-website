@@ -47,8 +47,7 @@ const ContactUs = () => {
     <div className="container mx-auto p-5  rounded-lg text-black grid grid-cols-1  md:grid-cols-2 gap-8">
       {/* Left Side - Text */}
       <div className="space-y-1">
-        <h1 className="text-xl font-bold text-blue-600">Contact Us</h1>
-        <h1 className="text-3xl font-bold mb-2">Struggling with IT Challenges? <br /> Get Expert Help Now!</h1>
+        <h1 className="text-3xl font-bold">Struggling with IT Challenges? <br /> <span className='text-xl'>Get Expert Help Now!</span></h1>
         <p className='text-justify'>
           Are you grappling with IT problems that seem too complex or time-consuming to resolve on your own? Let us help! We understand that technology issues can be overwhelming, and we're here to offer a helping hand. Our free IT consultation service is designed to give you the clarity and guidance you need without any obligation.
         </p>
@@ -71,10 +70,9 @@ const ContactUs = () => {
 
 
       {/* Right Side - Form */}
-      <div className="outline outline-blue-600 rounded-lg p-2">
-        <h2 className="text-xl font-bold mb-1 text-center text-blue-600">Request Your Free IT Consultation</h2>
-        <hr/>
-            <form onSubmit={handleSubmit} className="p-2  space-y-4">
+      <div className=" rounded-lg p-2 bg-white shadow-xl">
+        <h2 className="text-xl font-bold mb-5 text-center text-black">Request Your Free IT Consultation</h2>
+            <form onSubmit={handleSubmit} className=" space-y-4">
       <div className="mb-2">
         <label className="block text-black text-sm font-semibold mb-2 flex items-center">
           <FaUser className="text-blue-600 text-xl mr-2" />
@@ -190,7 +188,7 @@ const ContactUs = () => {
       </div>
       <div className="flex items-center justify-end">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-700  font-semibold py-2 px-3 text-white rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Send Message

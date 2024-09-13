@@ -12,23 +12,36 @@ import ContactUs from '../components/ContactUs';
 import SrsImg from '../assets/srs_software.png'
 import Slider from 'react-slick';
 
+import Landing1 from '../assets/Landing1.jpg'
+import Landing2 from '../assets/Landing2.jpg'
+import Landing3 from '../assets/a2.jpg'
+import { Link } from 'react-router-dom';
 const bannerImages = [
   {
-    image: 'https://img.freepik.com/free-photo/man-using-digital-tablet-psd-mockup-smart-technology_53876-110815.jpg?t=st=1725267763~exp=1725271363~hmac=4592306e858060487a5a1f327c28d9a8a88c2c25fc090a7b373d90a1ae9164b3&w=1060'
+    image: Landing1,
+    heading: "Welcome to SRS Softwares",
+    description: "Our company's objective is to use our application development services to help your business reach new heights."
   },
   {
-    image: 'https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041849.jpg?t=st=1725267408~exp=1725271008~hmac=a17da7b52926dacbed7497c5c56a5a20ef66f7b47073f4f766b96c57e93f91ef&w=1060'
+    image: Landing2,
+    heading: "Sculpt Your Thoughts To Reality",
+    description: "Learn more about our groundbreaking solutions."
   },
   {
-    image: 'https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041848.jpg?t=st=1725267689~exp=1725271289~hmac=42e70f8c21cd35c754ea0e820eb1c873bdfda928dd6a35bfd43555c18ece2004&w=1060'
+    image: Landing3,
+    heading: "Cutting-Edge Technology",
+    description: "Explore our latest tech innovations and advancements."
   },
   {
-    image: 'https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041866.jpg?t=st=1725267636~exp=1725271236~hmac=2b6aa6570e3e15ba094ee1a54dfbe83bfb968e97483ec27438eef25e73c7ef2b&w=1060'
+    image: Landing1,
+    heading: "A Complete Software Development solutions",
+    description: "Discover amazing features and get started with ease."
   },
   {
-    image: 'https://img.freepik.com/free-photo/cloud-technology-with-futuristic-hologram-smartwatch_53876-124625.jpg?t=st=1725267822~exp=1725271422~hmac=87b50ddd2595d8a3846cbd1017835116669a420eacd10439ddcf4059098c7077&w=1060'
+    image: Landing2,
+    heading: "Innovative Solutions",
+    description: "Learn more about our groundbreaking solutions."
   },
-  
 ];
 
 const HomePage = () => {
@@ -54,24 +67,48 @@ const HomePage = () => {
         heading="Crafting Tailored Solutions for Your Business Success"
         paragraph="Building Ultimate End-to-End Web Applications to Accelerate your Growth."
       />*/}
-      <div className="w-full ">
-          <Slider {...settings}>
-            {bannerImages.map((testimonial, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center h-[600px]">
-                <div className="flex justify-center h-[570px] my-auto">
-                  <img src={testimonial.image} alt={testimonial.name} className="h-full object-cover rounded-lg w-full my-auto" />
-                </div>
-              </div>
-            ))}
-          </Slider>
+<div className="w-full">
+  <Slider {...settings}>
+    {bannerImages.map((testimonial, index) => (
+      <div key={index} className="relative bg-white p-2 rounded-lg shadow-lg text-center h-[550px]">
+        {/* Image Section */}
+        <div className="flex justify-center h-full w-full">
+          <img 
+            src={testimonial.image} 
+            alt={testimonial.name} 
+            className="w-full h-full object-cover rounded-lg filter blur-sm"
+          />
         </div>
+
+        {/* Overlay Text and Buttons */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+          <h1 className="text-4xl font-bold mb-4">{ testimonial.heading }</h1>
+          <p className="text-lg mb-6 font-semibold">{ testimonial.description }</p>
+
+          {/* Buttons */}
+          <Link to='/services'>
+          <div className="flex space-x-4">
+            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              Get Started
+            </button>
+            <button className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+              Know More
+            </button>
+          </div>
+          </Link>
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
 
       <div className="container mx-auto p-2 lg:w-[95%]">
         <div className="bg-white p-4 lg:p-4 rounded-lg">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Left Side */}
             <div className="space-y-1 my-auto mx-auto">
-              <img src={SrsImg} alt="" className="w-[150px] mx-auto  object-contain rounded-lg"/>
+              <img src={SrsImg} alt="" className="w-[150px] mx-auto  object-contain rounded-lg "/>
               <h1 className="text-sm lg:text-lg font-semibold">India's Leading Enterprise Solutions Development Company</h1>
             </div>
 
